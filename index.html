@@ -56,6 +56,10 @@
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
             cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery img:active {
+            transform: scale(0.97);
         }
         .gallery-caption {
             margin-top: 0.5em;
@@ -71,8 +75,6 @@
             background-color: #eee;
             margin-top: 3em;
         }
-
-        /* Estilos adaptativos para pantallas pequeñas */
         @media (max-width: 600px) {
             .container {
                 padding: 1em;
@@ -141,3 +143,4 @@
     </footer>
 </body>
 </html>
+
