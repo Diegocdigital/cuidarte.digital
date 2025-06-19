@@ -47,9 +47,12 @@
         }
         .gallery-item {
             text-align: center;
+            flex: 1 1 100%;
         }
         .gallery img {
-            width: 280px;
+            width: 100%;
+            max-width: 280px;
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
             cursor: pointer;
@@ -67,6 +70,23 @@
             padding: 2em;
             background-color: #eee;
             margin-top: 3em;
+        }
+
+        /* Estilos adaptativos para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1em;
+            }
+            .main-title {
+                font-size: 1.8em;
+            }
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery img {
+                width: 90%;
+            }
         }
     </style>
     <script>
