@@ -121,25 +121,34 @@
             <li>✔️ Fabricado en material resistente, liviano y lavable.</li>
             <li>✔️ Diseño portátil: ideal para llevar como llavero.</li>
         </ul>
-        <h2>Galería de imágenes</h2>
-        <div style="text-align: center; margin: 2em 0;">
-            <button onclick="mostrarGaleria()" style="background-color: #1976d2; color: white; padding: 1em 2em; border: none; border-radius: 8px; font-size: 1.2em; cursor: pointer;">
-                Ver galería de imágenes
-            </button>
-        </div>
+<h2>Galería de imágenes</h2>
+<div style="text-align: center; margin: 2em 0;">
+    <button onclick="mostrarGaleria()" style="background-color: #1976d2; color: white; padding: 1em 2em; border: none; border-radius: 8px; font-size: 1.2em; cursor: pointer;">
+        Ver galería de imágenes
+    </button>
+</div>
 
-        <div id="ventanaGaleria" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); z-index:1000; overflow:auto;">
-            <div style="max-width:900px; margin:5vh auto; background:white; padding:2em; border-radius:8px; position:relative;">
-                <span onclick="cerrarGaleria()" style="position:absolute; top:10px; right:20px; font-size:2em; cursor:pointer;">&times;</span>
-                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1em;">
-                    <img src="1.jpg" style="max-width:200px; border-radius:8px;">
-                    <img src="2.jpg" style="max-width:200px; border-radius:8px;">
-                    <img src="3.jpg" style="max-width:200px; border-radius:8px;">
-                    <img src="4.jpg" style="max-width:200px; border-radius:8px;">
-                    <img src="5.jpg" style="max-width:200px; border-radius:8px;">
-                </div>
-            </div>
+<div id="ventanaGaleria" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); z-index:1000; overflow:auto;">
+    <div style="max-width:900px; margin:5vh auto; background:white; padding:2em; border-radius:8px; position:relative;">
+        <span onclick="cerrarGaleria()" style="position:absolute; top:10px; right:20px; font-size:2em; cursor:pointer;">&times;</span>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1em;">
+            <img src="1.jpg" style="max-width:200px; border-radius:8px;">
+            <img src="2.jpg" style="max-width:200px; border-radius:8px;">
+            <img src="4.jpg" style="max-width:200px; border-radius:8px;">
+            <img src="5.jpg" style="max-width:200px; border-radius:8px;">
+            <!-- falta una imagen aquí -->
         </div>
+    </div>
+</div>
+<script>
+    function mostrarGaleria() {
+        document.getElementById('ventanaGaleria').style.display = 'block';
+    }
+    function cerrarGaleria() {
+        document.getElementById('ventanaGaleria').style.display = 'none';
+    }
+</script>
+      
 
         <h2>Contacto</h2>
         <p>¿Querés recibir más información, muestras o realizar un pedido?</p>
