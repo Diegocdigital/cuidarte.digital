@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+html_content = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUIDARTE DIGITAL</title>
     <style>
-        body {
+        body {{
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -16,83 +16,46 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             opacity: 0.95;
-        }
-        header {
+        }}
+        header {{
             background-color: #1976d2;
             color: white;
             padding: 1.5em 0;
             text-align: center;
-        }
-        .container {
+        }}
+        .container {{
             padding: 2em;
             max-width: 1000px;
             margin: auto;
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
+        }}
+        h1, h2 {{
             color: #1976d2;
-        }
-        .main-title {
+        }}
+        .main-title {{
             text-align: center;
             font-size: 2.5em;
             margin-top: 1em;
             color: #1976d2;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1em;
-            justify-content: center;
-        }
-        .gallery-item {
-            text-align: center;
-            flex: 1 1 100%;
-        }
-        .gallery img {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
-        .gallery-caption {
-            margin-top: 0.5em;
-            font-weight: bold;
-            color: #333;
-        }
-        .features {
+        }}
+        .features {{
             margin-top: 2em;
-        }
-        footer {
+        }}
+        footer {{
             text-align: center;
             padding: 2em;
             background-color: #eee;
             margin-top: 3em;
-        }
-
-        /* Estilos adaptativos para pantallas pequeñas */
-        @media (max-width: 600px) {
-            .container {
-                padding: 1em;
-            }
-            .main-title {
-                font-size: 1.8em;
-            }
-            .gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-            .gallery img {
-                width: 90%;
-            }
-        }
+        }}
     </style>
     <script>
-        function abrirEspecificaciones(url) {
-            window.open(url, '_blank', 'width=600,height=400');
-        }
+        function mostrarGaleria() {{
+            document.getElementById('ventanaGaleria').style.display = 'block';
+        }}
+        function cerrarGaleria() {{
+            document.getElementById('ventanaGaleria').style.display = 'none';
+        }}
     </script>
 </head>
 <body>
@@ -117,14 +80,21 @@
         </ul>
 
         <h2>Galería de imágenes</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="1.jpg" alt="Dispositivo cerrado" onclick="abrirEspecificaciones('especificaciones1.html')">
-                <div class="gallery-caption"></div>
-            </div>
-            <div class="gallery-item">
-                <img src="2.jpg" alt="Ampolla en dispositivo" onclick="abrirEspecificaciones('especificaciones2.html')">
-                <div class="gallery-caption"></div>
+        <div style="text-align: center; margin: 2em 0;">
+            <button onclick="mostrarGaleria()" style="background-color: #1976d2; color: white; padding: 1em 2em; border: none; border-radius: 8px; font-size: 1.2em; cursor: pointer;">
+                Ver galería de imágenes
+            </button>
+        </div>
+
+        <div id="ventanaGaleria" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); z-index:1000; overflow:auto;">
+            <div style="max-width:900px; margin:5vh auto; background:white; padding:2em; border-radius:8px; position:relative;">
+                <span onclick="cerrarGaleria()" style="position:absolute; top:10px; right:20px; font-size:2em; cursor:pointer;">&times;</span>
+                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1em;">
+                    <img src="imagenes/1.jpg" style="max-width:200px; border-radius:8px;">
+                    <img src="imagenes/2.jpg" style="max-width:200px; border-radius:8px;">
+                    <img src="imagenes/4.jpg" style="max-width:200px; border-radius:8px;">
+                    <img src="imagenes/5.jpg" style="max-width:200px; border-radius:8px;">
+                </div>
             </div>
         </div>
 
