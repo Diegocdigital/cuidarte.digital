@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUIDARTE DIGITAL</title>
     <style>
-        body {{
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -16,46 +16,89 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             opacity: 0.95;
-        }}
-        header {{
+        }
+        header {
             background-color: #1976d2;
             color: white;
             padding: 1.5em 0;
             text-align: center;
-        }}
-        .container {{
+        }
+        .container {
             padding: 2em;
             max-width: 1000px;
             margin: auto;
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }}
-        h1, h2 {{
+        }
+        h1, h2 {
             color: #1976d2;
-        }}
-        .main-title {{
+        }
+        .main-title {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
             text-align: center;
             font-size: 2.5em;
             margin-top: 1em;
             color: #1976d2;
-        }}
-        .features {{
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+        }
+        .gallery-item {
+            text-align: center;
+            flex: 1 1 100%;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery img:active {
+            transform: scale(0.97);
+        }
+        .gallery-caption {
+            margin-top: 0.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        .features {
             margin-top: 2em;
-        }}
-        footer {{
+        }
+        footer {
             text-align: center;
             padding: 2em;
             background-color: #eee;
             margin-top: 3em;
-        }}
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1em;
+            }
+            .main-title {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+                font-size: 1.8em;
+            }
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery img {
+                width: 90%;
+            }
+        }
     </style>
     <script>
-        function mostrarGaleria() {{
-            document.getElementById('ventanaGaleria').style.display = 'block';
-        }}
-        function cerrarGaleria() {{
-            document.getElementById('ventanaGaleria').style.display = 'none';
-        }}
+        function abrirEspecificaciones(url) {
+            window.open(url, '_blank', 'width=600,height=400');
+        }
     </script>
 </head>
 <body>
@@ -78,7 +121,6 @@
             <li>✔️ Fabricado en material resistente, liviano y lavable.</li>
             <li>✔️ Diseño portátil: ideal para llevar como llavero.</li>
         </ul>
-
         <h2>Galería de imágenes</h2>
         <div style="text-align: center; margin: 2em 0;">
             <button onclick="mostrarGaleria()" style="background-color: #1976d2; color: white; padding: 1em 2em; border: none; border-radius: 8px; font-size: 1.2em; cursor: pointer;">
