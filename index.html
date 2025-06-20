@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -57,10 +56,6 @@
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
             cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-        .gallery img:active {
-            transform: scale(0.97);
         }
         .gallery-caption {
             margin-top: 0.5em;
@@ -76,6 +71,8 @@
             background-color: #eee;
             margin-top: 3em;
         }
+
+        /* Estilos adaptativos para pantallas pequeñas */
         @media (max-width: 600px) {
             .container {
                 padding: 1em;
@@ -122,24 +119,12 @@
         <h2>Galería de imágenes</h2>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="Diseno 1.jpeg" alt="Modelos de personajes" />
-                <div class="gallery-caption">Personajes impresos</div>
+                <img src="1.jpg" alt="Dispositivo cerrado" onclick="abrirEspecificaciones('especificaciones1.html')">
+                <div class="gallery-caption"></div>
             </div>
             <div class="gallery-item">
-                <img src="Diseno 2.jpeg" alt="Modelo simpático cilíndrico" />
-                <div class="gallery-caption">Modelo con carita</div>
-            </div>
-            <div class="gallery-item">
-                <img src="Diseno 3.jpeg" alt="Dispositivo abierto blanco" />
-                <div class="gallery-caption">Abre ampollas abierto</div>
-            </div>
-            <div class="gallery-item">
-                <img src="Diseno 4.jpeg" alt="Tapa de ampolla" />
-                <div class="gallery-caption">Tapa de protección</div>
-            </div>
-            <div class="gallery-item">
-                <img src="Diseno 5.jpeg" alt="Dispositivo color naranja" />
-                <div class="gallery-caption">Versión color llavero</div>
+                <img src="2.jpg" alt="Ampolla en dispositivo" onclick="abrirEspecificaciones('especificaciones2.html')">
+                <div class="gallery-caption"></div>
             </div>
         </div>
 
